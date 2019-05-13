@@ -15,7 +15,7 @@ public class Server extends Thread{
         this.serverPort = serverPort;
     }
 
-    public List<ServerWorker> getWorkerLIst() {
+    public List<ServerWorker> getWorkerList() {
         return workerList;
 
     }
@@ -38,4 +38,7 @@ public class Server extends Thread{
         }
     }
 
+    public void removeWorker(ServerWorker serverWorker) {
+        workerList.remove(serverWorker);
+    }
 }
